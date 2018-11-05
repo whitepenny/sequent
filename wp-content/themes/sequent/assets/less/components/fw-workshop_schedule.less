@@ -1,0 +1,277 @@
+.public_schedule {
+  background: @gray_5;
+}
+
+// .public_schedule_row {}
+//
+// .public_schedule_cell {}
+
+.public_schedule_title {
+  .chronicle_bold;
+
+  color: @blue_dark;
+  font-size: 36px;
+  margin: 0 0 40px;
+  text-align: center;
+
+  @media @min_md {
+    font-size: 50px;
+  }
+
+  @media @min_lg {
+    font-size: 60px;
+  }
+
+  @media @min_xl {
+    font-size: 68px;
+  }
+}
+
+.public_schedule_footer {
+  margin: 40px 0 0;
+  text-align: center;
+
+  @media @min_lg {
+    margin: 60px 0 20px;
+  }
+}
+
+.public_schedule_button {
+  .button_blue_lighter;
+  .inline_block;
+}
+
+//
+
+.schedule_table {
+  margin: 50px 0 0;
+}
+
+.schedule_table_header {
+  .flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 20px 20px;
+  text-align: center;
+
+  @media @max_lg {
+    display: none;
+  }
+
+  @media @min_xl {
+    padding: 0 30px 30px;
+  }
+}
+
+.schedule_table_workshop {
+
+  @media @min_lg {
+    width: 15%;
+
+    flex: 0 0 15%;
+
+    margin: 0 0 0 10px;
+  }
+
+  .label {
+    .avenir_black;
+    .block;
+
+    color: @blue_mid;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    margin: 0;
+  }
+
+  .title {
+    .avenir;
+    .block;
+
+    color: @gray_70;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .price {
+    .avenir_black;
+    .block;
+
+    color: @gray_70;
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+.schedule_table_rows {}
+
+.schedule_table_row {
+  background: transparent;
+  padding: 20px;
+
+  &:nth-child(odd) {
+    background: @white;
+  }
+
+  @media @min_lg {
+    .flex;
+
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media @min_xl {
+    padding: 30px;
+  }
+}
+
+.schedule_table_handle {
+
+  @media @max_lg {
+    .relative;
+
+    padding: 0 40px 0 0;
+
+    &:after {
+      .absolute;
+
+      height: 1px;
+      width: 1px;
+
+      top: 0;
+      right: 10px;
+      bottom: 0;
+
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 14px solid @yellow_mid;
+      content: '';
+      margin: auto 0;
+      // transition: transform 0.1s ease;
+
+      .fs-swap-active & {
+        transform: rotate(-180deg);
+      }
+
+      // @media @min_md {
+      //   right: 20px;
+      // }
+    }
+  }
+
+  @media @min_lg {
+    .flex;
+
+    width: 50%;
+
+    flex: 0 0 50%;
+  }
+}
+
+.schedule_table_title {
+  .avenir_black;
+
+  color: @blue_dark;
+  font-size: 20px;
+  margin: 0;
+
+  @media @min_lg {
+    width: 60%;
+
+    flex: 0 0 60%;
+
+    font-size: 22px;
+    padding: 0 20px 0 0;
+    margin: 0;
+  }
+}
+
+.schedule_table_location {
+  .avenir;
+  .block;
+
+  color: @gray_70;
+  font-size: 20px;
+  padding: 0 20px 0 0;
+
+  .fs-swap-active & {
+    margin: 0 0 20px;
+  }
+
+  @media @min_lg {
+    width: 40%;
+
+    flex: 0 0 40%;
+
+    font-size: 22px;
+    margin: 0;
+  }
+}
+
+.schedule_table_button {
+  .button_blue;
+}
+
+// .schedule_table_instances {}
+
+.schedule_table_instance {
+  .contain;
+
+  @media @max_lg {
+    .flex;
+
+    border-top: 1px solid fade(@black, 10);
+    align-items: center;
+    padding: 20px 0;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    .fs-swap-enabled & {
+      display: none;
+    }
+
+    .fs-swap-active & {
+      .flex;
+    }
+  }
+
+  @media @min_lg {
+    width: 15%;
+
+    flex: 0 0 15%;
+
+    margin: 0 0 0 10px;
+  }
+
+  .schedule_table_workshop {
+    // .contain;
+    // .left;
+
+    flex-grow: 1;
+    padding: 0 20px 0 0;
+
+    @media @min_lg {
+      display: none;
+    }
+
+    // .label {
+    //   // .left;
+    // }
+    //
+    // .title {
+    //   .left;
+    // }
+    //
+    // .price {
+    //   .right;
+    // }
+  }
+
+  .schedule_table_button {
+    // .right;
+    //
+    // margin: 10px 0 0;
+  }
+}

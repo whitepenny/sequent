@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>social_linkedin_blue</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="social_linkedin_blue" fill="#4ABCED" fill-rule="nonzero">
+            <rect id="Rectangle-path" x="0.554692082" y="5.69538123" width="3.59237537" height="10.2639296"></rect>
+            <circle id="Oval" cx="2.35087977" cy="2.35960411" r="1.79618768"></circle>
+            <path d="M15.9505865,10.3187683 C15.9505865,7.54904692 15.3532258,5.69538123 12.1247067,5.69538123 C10.5733138,5.69538123 9.53152493,6.27170088 9.10557185,7.08049853 L9.06143695,7.08049853 L9.06143695,5.69538123 L6.19985337,5.69538123 L6.19985337,15.9593109 L9.19076246,15.9593109 L9.19076246,10.8719941 C9.19076246,9.53049853 9.44428152,8.23159824 11.1039589,8.23159824 C12.7390029,8.23159824 12.8708944,9.76554252 12.8708944,10.9587243 L12.8708944,15.959824 L15.9500733,15.959824 L15.9500733,10.3187683 L15.9505865,10.3187683 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

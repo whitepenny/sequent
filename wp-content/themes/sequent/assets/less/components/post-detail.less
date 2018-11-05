@@ -1,0 +1,154 @@
+// Detail
+
+.post_detail {
+
+  .page_title {
+    font-size: 35px;
+
+    @media @min_md {
+      font-size: 44px;
+    }
+
+    @media @min_md {
+      font-size: 54px;
+    }
+  }
+
+  .page_container {
+    padding-right: 0;
+  }
+
+  .intro {
+    .relative;
+
+    @media @min_md {
+
+      &:before {
+        .block;
+        .absolute;
+
+        top: 8px;
+        left: -40px;
+
+        border-bottom: 25px solid transparent;
+        border-right: 25px solid @yellow_mid;
+        content: '';
+      }
+    }
+  }
+}
+
+.post_image_cell {
+  margin: 40px 0;
+
+  @media @min_md {
+    margin: 40px 0;
+  }
+
+  @media @min_lg {
+    margin: 60px 0;
+  }
+
+  @media @min_xl {
+    margin: 80px 0;
+  }
+}
+
+//
+
+.post_social {
+  padding: 30px 0;
+}
+
+.post_social_label {
+  .relative;
+  .contain;
+
+  margin: 0 0 20px;
+
+  span {
+    .left;
+    .relative;
+    .avenir_black;
+
+    z-index: 1;
+
+    background: @white;
+    color: @blue_lighter;
+    font-size: 14px;
+    margin: 0;
+    padding: 0 15px 0 0;
+    text-transform: uppercase;
+
+    @media @min_md {
+      font-size: 16px;
+    }
+  }
+
+  &:after {
+    .absolute;
+
+    height: 2px;
+    width: 100%;
+
+    top: 0;
+    right: 0;
+    bottom: 3px;
+    left: 0;
+    z-index: 0;
+
+    background: @blue_dark;
+    content: '';
+    margin: auto;
+  }
+}
+
+.post_social_link,
+a.post_social_link {
+  .inline_block;
+  .avenir_black;
+
+  border: none;
+  color: @blue_mid;
+  line-height: 30px;
+  cursor: pointer;
+  margin: 0 10px 0 0;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    color: @blue_dark;
+    border: none;
+  }
+}
+
+.post_social_link_icon {
+  .inline_block;
+  .transition_link;
+
+  height: 36px;
+  width: 36px;
+
+  border-radius: 100%;
+  background: @blue_mid;
+  line-height: 30px;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+
+  a:hover & {
+    background: @blue_dark;
+  }
+
+  &.email {
+    margin-right: 5px;
+  }
+}
+
+.addthis_toolbox {
+
+  .post_social_link {
+    line-height: 30px;
+    margin-bottom: 0;
+  }
+}

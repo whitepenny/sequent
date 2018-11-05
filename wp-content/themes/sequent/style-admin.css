@@ -1,0 +1,30 @@
+body#tinymce.wp-editor p.intro {
+  font-size: 20px;
+}
+
+/* body#tinymce.wp-editor .highlight {
+  background: yellow;
+}
+
+body#tinymce.wp-editor h4.label {
+  font-weight: bold;
+  text-decoration: underline;
+} */
+
+body#tinymce.wp-editor .button_blue,
+body#tinymce.wp-editor .button_blue_light,
+body#tinymce.wp-editor .button_blue_lighter {
+  background: #005DB8;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+body#tinymce.wp-editor .button_blue_light {
+  background: #1077DD;
+}
+
+body#tinymce.wp-editor .button_blue_lighter {
+  background: #4ABCED;
+}

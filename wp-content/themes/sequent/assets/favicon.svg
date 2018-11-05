@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300px" height="300px" viewBox="0 0 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>favicon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="favicon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(68.000000, 10.000000)">
+            <rect id="_Path_" fill="#6BC4E8" x="57.2833333" y="-1.77635684e-14" width="50.1666667" height="50.1666667"></rect>
+            <rect id="_Path_2" fill="#6BC4E8" x="57.2833333" y="114.566667" width="50.1666667" height="50.1666667"></rect>
+            <polyline id="_Path_3" fill="#0055B8" points="114.566667 114.566667 114.566667 164.733333 164.733333 164.733333"></polyline>
+            <rect id="_Path_4" fill="#002856" x="114.566667" y="57.2833333" width="50.1666667" height="50.1666667"></rect>
+            <rect id="_Path_5" fill="#002856" x="114.566667" y="171.85" width="50.1666667" height="50.1666667"></rect>
+            <rect id="_Path_6" fill="#002856" x="57.2833333" y="229.191667" width="50.1666667" height="50.1666667"></rect>
+            <polyline id="_Path_7" fill="#0055B8" points="114.566667 -1.77635684e-14 114.566667 50.1666667 164.733333 50.1666667"></polyline>
+            <polyline id="_Path_8" fill="#6BC4E8" points="50.1666667 104.183333 50.1666667 57.225 3.20833333 57.225"></polyline>
+            <polyline id="_Path_9" fill="#6BC4E8" points="50.1666667 218.808333 50.1666667 171.85 3.20833333 171.85"></polyline>
+            <polygon id="_Path_10" fill="#0055B8" points="-1.21147536e-12 64.4 -1.21147536e-12 114.566667 50.1666667 164.733333 50.1666667 114.566667"></polygon>
+            <polygon id="_Path_11" fill="#0055B8" points="-1.21147536e-12 179.025 -1.21147536e-12 229.191667 50.1666667 279.358333 50.1666667 229.191667"></polygon>
+        </g>
+    </g>
+</svg>

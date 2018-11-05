@@ -1,0 +1,229 @@
+.schedule_block {
+  .relative;
+  .contain;
+
+  background: @blue_mid;
+}
+
+.schedule_block_image {
+  height: 250px;
+
+  @media @min_md {
+    height: 350px;
+  }
+
+  @media @min_lg {
+    height: 450px;
+  }
+
+  @media @min_xl {
+    height: 550px;
+  }
+}
+
+.schedule_block_container {
+  margin-top: -12%;
+  padding: 0 0 70px;
+
+  @media @min_md {
+    padding: 0 0 80px;
+  }
+
+  @media @min_lg {
+    padding: 0 0 90px;
+  }
+
+  @media @min_xl {
+    padding: 0 0 100px;
+  }
+}
+
+.schedule_block_header {
+  background: @white;
+  padding: 30px 50px 30px 30px;
+
+  @media @min_md {
+    padding: 40px 60px 40px 40px;
+  }
+
+  @media @min_lg {
+    padding: 50px;
+  }
+
+  @media @min_xl {
+    padding: 60px;
+  }
+}
+
+.schedule_block_label {
+  .avenir_black;
+  .block;
+
+  color: @black;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+}
+
+.schedule_block_title {
+  .chronicle_bold;
+
+  color: @blue_dark;
+  font-size: 36px;
+  line-height: 1.1;
+  margin: 0 0 15px;
+
+  @media @min_md {
+    font-size: 50px;
+  }
+
+  @media @min_lg {
+    font-size: 60px;
+    margin: 0 0 20px;
+  }
+
+  @media @min_xl {
+    font-size: 68px;
+  }
+}
+
+.schedule_block_content {
+
+  p {
+    font-size: 16px;
+    margin-bottom: 0;
+
+    @media @min_md {
+      font-size: 18px;
+    }
+  }
+}
+
+.schedule_list_label {
+  .avenir_black;
+  .relative;
+  .block;
+
+  color: @white;
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 30px 0 20px;
+  padding: 0 40px 0 60px;
+
+  @media @min_md {
+    font-size: 24px;
+    padding: 0 0 0 95px;
+  }
+
+  @media @min_xl {
+    font-size: 32px;
+    margin: 0;
+    padding: 0 0 0 120px;
+  }
+
+  &:before {
+    .block;
+    .absolute;
+
+    top: 5px;
+    left: 0;
+
+    border-bottom: 35px solid transparent;
+    border-right: 35px solid @yellow_mid;
+    content: '';
+
+    @media @min_md {
+      border-bottom: 50px solid transparent;
+      border-right: 50px solid @yellow_mid;
+    }
+
+    @media @min_lg {
+      left: 20px;
+    }
+
+    @media @min_xl {
+      border-bottom: 70px solid transparent;
+      border-right: 70px solid @yellow_mid;
+    }
+  }
+}
+
+.schedule_list_items {
+  padding: 10px 0 0;
+
+  @media @min_lg {
+    padding: 60px 0 0;
+  }
+
+  @media @min_xl {
+    padding: 80px 0 0;
+  }
+}
+
+.schedule_item {
+  .flex;
+
+  margin: 0 0 20px;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  @media @min_md {
+    .transition_delay_loop(10);
+
+    margin: 0;
+  }
+}
+
+.schedule_item_link {
+  .block;
+
+  background: @blue_lighter;
+  flex-grow: 1;
+  padding: 40px 30px;
+
+  @media @min_lg {
+    padding: 60px 40px;
+  }
+
+  &:hover {
+    background: @blue_dark;
+  }
+}
+
+.schedule_item_title {
+  .avenir_black;
+  .transition_link;
+
+  border-bottom: 3px solid @blue_dark;
+  color: @white;
+  font-size: 26px;
+  line-height: 1.2;
+  margin: 0 0 15px;
+  padding: 0 0 10px;
+
+  @media @min_lg {
+    font-size: 34px;
+  }
+
+  a:hover & {
+    border-color: @blue_lighter;
+  }
+}
+
+.schedule_item_date {
+  .avenir_black;
+  .block;
+
+  color: @white;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  @media @min_lg {
+    font-size: 16px;
+  }
+}

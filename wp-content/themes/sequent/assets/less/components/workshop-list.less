@@ -1,0 +1,125 @@
+.workshop_list {}
+
+.workshop_item {
+  .transition_delay_loop(20);
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  @media @min_md {
+    .flex;
+
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  @media @min_lg {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  @media @min_xl {
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.workshop_item_image,
+.workshop_item_container {
+
+  @media @min_md {
+    width: 48%;
+
+    flex: 0 0 48%;
+  }
+}
+
+.workshop_item_image {
+  .block;
+
+  margin: 0 0 30px;
+
+  @media @min_md {
+    width: 50%;
+
+    margin: 0;
+  }
+
+  @media @min_md @and_max_lg {
+    order: 1;
+  }
+}
+
+.workshop_item_container {
+  .contain;
+
+  @media @min_lg {
+    padding-left: 40px;
+  }
+}
+
+.workshop_item_title {
+  .transition_link;
+  .chronicle_bold;
+  .relative;
+
+  color: @blue_dark;
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0 0 10px;
+
+  @media @min_lg {
+    font-size: 32px;
+  }
+}
+
+.workshop_item_content {
+
+  p {
+    margin: 15px 0 20px;
+  }
+}
+
+.workshop_item_button {
+  .button_blue;
+  .inline_block;
+}
+
+
+//
+
+.workshop_grid {
+
+  .workshop_item {
+
+    @media @min_lg {
+      .block;
+
+      // margin-top: 0;
+    }
+  }
+
+  .workshop_item_image,
+  .workshop_item_container {
+
+    @media @min_lg {
+      width: 100%;
+    }
+  }
+
+  .workshop_item_container {
+
+    @media @min_lg {
+      padding: 0 30px 0 0;
+    }
+  }
+
+  .workshop_item_image {
+
+    @media @min_lg {
+      margin: 0 0 30px;
+    }
+  }
+}

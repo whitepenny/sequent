@@ -1,0 +1,30 @@
+.logo_row {
+  background: @gray_5;
+  padding: 20px 0;
+}
+
+.logo_row_items {
+  .flex;
+
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.logo_row_item {
+  min-width: 100px;
+  max-width: 260px;
+
+  align-items: center;
+  margin: 20px 20px;
+
+  @media @min_lg {
+    margin: 50px 30px;
+  }
+
+  img {
+    .block;
+
+    max-width: 100%;
+  }
+}

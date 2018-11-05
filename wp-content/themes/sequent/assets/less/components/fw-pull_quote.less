@@ -1,0 +1,65 @@
+.pull_quote {
+  background: @blue_mid;
+}
+
+.pull_quote_blockquote {
+  .relative;
+
+  padding: 0 0 0 50px;
+  margin: 0;
+
+  @media @min_md {
+    padding: 0 0 0 100px;
+  }
+
+  p {
+    .relative;
+    .avenir_black;
+
+    color: @white;
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 0;
+
+    @media @min_md {
+      font-size: 36px;
+    }
+
+    @media @min_lg {
+      font-size: 42px;
+    }
+
+    strong {
+      .avenir_black;
+
+      border-bottom: 1px solid @yellow_mid;
+    }
+
+    &:before {
+      .block;
+      .absolute;
+
+      top: 5px;
+      right: 105%;
+
+      border-bottom: 35px solid transparent;
+      border-right: 35px solid @yellow_mid;
+      content: '';
+
+      @media @min_md {
+        border-bottom: 60px solid transparent;
+        border-right: 60px solid @yellow_mid;
+      }
+
+      @media @min_lg {
+        border-bottom: 90px solid transparent;
+        border-right: 90px solid @yellow_mid;
+      }
+
+      @media @min_xl {
+        border-bottom: 120px solid transparent;
+        border-right: 120px solid @yellow_mid;
+      }
+    }
+  }
+}
