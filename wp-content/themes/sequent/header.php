@@ -47,7 +47,7 @@ $scripts_body = get_field( 'scripts_body', 'option' );
             'type'     => 'overlay',
             'gravity'  => 'right',
             'label'    => false,
-            'maxWidth' => '979px'
+            'maxWidth' => '1499px'
           );
         ?>
         <div class="mobile_nav_tray js-navigation" data-navigation-handle=".js-mobile_nav_handle" data-navigation-options="<?php echo sl_json_options( $navigation_options ); ?>" aria-hidden="true">
