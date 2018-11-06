@@ -32,17 +32,6 @@ if ( have_posts() ) :
 
     $background_options = sl_image_background_contact( $image['ID'] );
 ?>
-<div class="address_block section_padded">
-  <div class="address_block_background js-background" data-background-options="<?php echo sl_json_options( $background_options ); ?>"></div>
-  <div class="fs-row padded_row address_block_row" data-checkpoint-animation="fade-up">
-    <div class="fs-cell fs-md-3 fs-lg-5 fs-lg-push-1 fs-xl-4 fs-xl-push-2 address_block_cell">
-      <h2 class="address_block_title"><?php echo $address_title; ?></h2>
-      <div class="address_block_content page_content">
-        <?php echo $content; ?>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="form_block section_padded">
   <div class="fs-row fs-all-justify-center form_block_row">
     <div class="fs-cell fs-md-5 fs-lg-9 fs-xl-8 form_block_cell" data-checkpoint-animation="fade-up">
@@ -57,6 +46,18 @@ if ( have_posts() ) :
     </div>
   </div>
 </div>
+<div class="address_block section_padded">
+  <div class="address_block_background js-background" data-background-options="<?php echo sl_json_options( $background_options ); ?>"></div>
+  <div class="fs-row padded_row address_block_row" data-checkpoint-animation="fade-up">
+    <div class="fs-cell fs-md-3 fs-lg-5 fs-lg-push-1 fs-xl-4 fs-xl-push-2 address_block_cell">
+      <h2 class="address_block_title"><?php echo $address_title; ?></h2>
+      <div class="address_block_content page_content">
+        <?php echo $content; ?>
+      </div>
+    </div>
+  </div>
+</div>
+
 <?php
   endwhile;
 endif;
