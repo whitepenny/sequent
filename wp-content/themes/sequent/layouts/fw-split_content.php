@@ -4,7 +4,7 @@ $label = get_sub_field( 'label' );
 $title = get_sub_field( 'title' );
 $content = get_sub_field( 'content' );
 ?>
-<div class="split_content gravity_<?php echo $gravity; ?> section_padded section_padded_top bg_white" data-checkpoint-animation="fade-up">
+<div class="split_content gravity_<?php echo $gravity; ?> section_mini_padded bg_white" data-checkpoint-animation="fade-up">
   <div class="fs-row padded_row split_content_row">
     <div class="fs-cell fs-lg-8 page_container split_content_container split_content_cell">
       <?php if ( ! empty( $label ) ) : ?>
