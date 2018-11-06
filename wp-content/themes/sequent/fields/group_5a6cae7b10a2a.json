@@ -894,6 +894,92 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5be1b92a42cc2": {
+                    "key": "layout_5be1b92a42cc2",
+                    "name": "alternate_clients",
+                    "label": "Alternate Clients",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5be1bfa0091ad",
+                            "label": "Client List Title",
+                            "name": "client_list_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5be1b93d42cc3",
+                            "label": "Client List Column One",
+                            "name": "client_list_column_one",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5be1bd459edff",
+                            "label": "Client List Column Two",
+                            "name": "client_list_column_two",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5be1bd579ee00",
+                            "label": "Client List Column Three",
+                            "name": "client_list_column_three",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Block",
@@ -939,5 +1025,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1539480617
+    "modified": 1541521783
 }
