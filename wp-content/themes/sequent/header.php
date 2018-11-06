@@ -13,6 +13,9 @@ $scripts_body = get_field( 'scripts_body', 'option' );
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" href="https://use.typekit.net/puq8glt.css">
+    
     <?php wp_head(); ?>
     <?php sl_favicons(); ?>
     <?php echo $scripts_head; ?>
