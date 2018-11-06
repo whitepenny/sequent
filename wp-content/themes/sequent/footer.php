@@ -16,7 +16,7 @@ $register_page = get_field( 'global_register_page', 'option' );
                 <span class="screenreader"><?php echo $main_title; ?></span>
               </a>
               <div class="footer_nav">
-                <?php sl_main_navigation( 2 ); ?>
+                <?php sl_footer_navigation( 2 ); ?>
               </div>
             </div>
           </div>
