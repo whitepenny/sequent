@@ -390,12 +390,19 @@ blockquote {
 //
 
 .section_padded {
-  padding: 40px 0;
+  padding: 70px 0;
 
-}
+  @media @min_md {
+    padding: 80px 0;
+  }
 
-.section_mini_padded {
-  padding: 0 0 30px;
+  @media @min_lg {
+    padding: 90px 0;
+  }
+
+  @media @min_xl {
+    padding: 100px 0;
+  }
 }
 
 .section_padded_top {
