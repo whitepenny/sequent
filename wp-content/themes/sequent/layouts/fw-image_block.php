@@ -21,7 +21,7 @@ $background_options = sl_image_background_page_header( $image['ID'] );
           <?php echo $content; ?>
         </div>
         <?php if ( ! empty( $button ) ) : ?>
-        <a href="<?php echo $button['link']; ?>" class="image_block_button"><?php echo $button['title']; ?></a>
+        <a href="<?php echo $button['url']; ?>" class="image_block_button"><?php echo $button['title']; ?></a>
         <?php endif; ?>
       </div>
     </div>
