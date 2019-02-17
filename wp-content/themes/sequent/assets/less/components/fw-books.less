@@ -1,0 +1,77 @@
+.books_bar {
+  background: @white;
+
+  @media @max_md {
+    text-align: center;
+  }
+}
+
+.books_bar_title {
+  .chronicle_bold;
+
+  color: @blue_dark;
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0 0 15px;
+
+  @media @min_lg {
+    font-size: 32px;
+  }
+}
+
+.books_bar_subtitle {
+  .avenir;
+
+  color: @black;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 15px 0;
+
+  @media @min_md {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+}
+
+.books_bar_button {
+  .button_blue_lighter;
+  // .button_large;
+
+  width: auto;
+
+  margin-top: 30px;
+
+  @media @min_md {
+    .inline_block;
+
+    margin-top: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+.books_bar_items_cell {
+
+  @media @max_md {
+    margin-bottom: 40px;
+  }
+}
+
+.books_bar_items {
+  .flex;
+
+  justify-content: center;
+}
+
+.books_bar_item {
+  width: 29%;
+  max-width: 120px;
+
+  margin: 0 3%;
+
+  img {
+    .block;
+
+    width: 100%;
+  }
+}

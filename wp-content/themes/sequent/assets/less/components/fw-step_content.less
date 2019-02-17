@@ -1,5 +1,9 @@
 .step_content {
   background: @gray_5;
+
+  &.bg_white {
+    background: @white;
+  }
 }
 
 .step_content_header {
@@ -64,7 +68,8 @@
   }
 
   @media @min_lg {
-    justify-content: space-between;
+    //justify-content: space-between;
+    justify-content: flex-start;
     padding: 60px 0 0;
   }
 }
@@ -130,5 +135,34 @@
     @media @min_md {
       font-size: 16px;
     }
+  }
+}
+
+.step_item_label {
+  .avenir_black;
+
+  color: @blue_dark;
+  font-size: 20px;
+  margin: 0;
+
+  @media @min_md {
+    font-size: 22px;
+  }
+}
+
+.step_item_link {
+  .avenir_black;
+  .inline_block;
+
+  color: @blue_light;
+  font-size: 16px;
+  margin: 5px 0 10px;
+
+  @media @min_md {
+    font-size: 18px;
+  }
+
+  &:hover {
+    color: @black;
   }
 }

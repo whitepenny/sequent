@@ -162,6 +162,11 @@ function sl_tiny_mce_before_init( $opts ) {
 			'inline' => 'a',
 			'classes' => 'button_blue_lighter',
 		),
+    array(
+			'title' => 'Simple List',
+			'block' => 'ul',
+			'classes' => 'simple_list',
+		),
 	);
 
 	$opts['style_formats'] = json_encode( $style_formats );
@@ -207,6 +212,7 @@ function sl_populate_gravity_forms_select( $field ) {
 add_filter( 'acf/load_field/name=gravity_form', 'sl_populate_gravity_forms_select' );
 add_filter( 'acf/load_field/name=global_newsletter_form', 'sl_populate_gravity_forms_select' );
 add_filter( 'acf/load_field/name=footer_gravity_form', 'sl_populate_gravity_forms_select' );
+add_filter( 'acf/load_field/name=page_gravity_form', 'sl_populate_gravity_forms_select' );
 
 
 // Pre Load Workshop Session Links

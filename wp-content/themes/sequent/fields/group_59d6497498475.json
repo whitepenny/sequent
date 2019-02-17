@@ -3,6 +3,31 @@
     "title": "Page Content",
     "fields": [
         {
+            "key": "field_5c69772dc0d30",
+            "label": "Page Header Type",
+            "name": "page_header_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Basic": "Basic",
+                "Form": "Form"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_59d6497717c50",
             "label": "Page Title",
             "name": "page_title",
@@ -133,6 +158,39 @@
                     "return_format": "array"
                 }
             ]
+        },
+        {
+            "key": "field_5c6976c477dba",
+            "label": "Page Form",
+            "name": "page_gravity_form",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c69772dc0d30",
+                        "operator": "==",
+                        "value": "Form"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "Contact Form",
+                "2": "Newsletter Signup"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -166,5 +224,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1541182295
+    "modified": 1550415696
 }

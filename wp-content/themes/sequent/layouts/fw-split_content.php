@@ -1,10 +1,15 @@
 <?php
 $gravity = get_sub_field( 'gravity' );
+$background = get_sub_field( 'background' );
 $label = get_sub_field( 'label' );
 $title = get_sub_field( 'title' );
 $content = get_sub_field( 'content' );
+
+if ( empty( $background ) ) {
+  $background = 'white';
+}
 ?>
-<div class="split_content gravity_<?php echo $gravity; ?> section_padded bg_white" data-checkpoint-animation="fade-up">
+<div class="split_content gravity_<?php echo $gravity; ?> section_padded bg_<?php echo $background; ?>" data-checkpoint-animation="fade-up">
   <div class="fs-row padded_row split_content_row">
     <?php
       if ( have_rows( 'sidebar' ) ) :
