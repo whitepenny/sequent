@@ -16,8 +16,9 @@
                 "id": ""
             },
             "choices": {
-                "Basic": "Basic",
-                "Form": "Form"
+                "basic": "Basic",
+                "image": "Image",
+                "form": "Form"
             },
             "default_value": [],
             "allow_null": 0,
@@ -72,15 +73,7 @@
             "type": "image",
             "instructions": "Min 1220x915px",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5a70a12d70b8a",
-                        "operator": "!=",
-                        "value": "simple"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -160,18 +153,45 @@
             ]
         },
         {
-            "key": "field_5c6976c477dba",
-            "label": "Page Form",
-            "name": "page_gravity_form",
-            "type": "select",
+            "key": "field_5c69a9e22de27",
+            "label": "Page Form Title",
+            "name": "page_form_title",
+            "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": [
                 [
                     {
                         "field": "field_5c69772dc0d30",
                         "operator": "==",
-                        "value": "Form"
+                        "value": "form"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c6976c477dba",
+            "label": "Page Form",
+            "name": "page_gravity_form",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c69772dc0d30",
+                        "operator": "==",
+                        "value": "form"
                     }
                 ]
             ],
@@ -182,7 +202,8 @@
             },
             "choices": {
                 "1": "Contact Form",
-                "2": "Newsletter Signup"
+                "2": "Newsletter Signup",
+                "3": "SEO Header"
             },
             "default_value": [],
             "allow_null": 0,
@@ -224,5 +245,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1550415696
+    "modified": 1550429070
 }
