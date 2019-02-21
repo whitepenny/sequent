@@ -11,9 +11,9 @@ require_once 'includes/utils-image-sizes.php';
 
 // Hide ACF on production
 
-if ( ! SL_DEV ) {
-  add_filter( 'acf/settings/show_admin', '__return_false' );
-}
+// if ( ! SL_DEV ) {
+//   add_filter( 'acf/settings/show_admin', '__return_false' );
+// }
 
 // Init
 
