@@ -380,13 +380,21 @@
   }
 
   .alignleft {
-    .left;
+    
+    @media @min_md {
+      .left;  
+    }
+    
 
     margin: 0 60px 25px 0;
   }
 
   .alignright {
-    .right;
+
+    @media @min_md {
+      .right;  
+    }
+    
 
     margin: 0 0 25px 60px;
   }
