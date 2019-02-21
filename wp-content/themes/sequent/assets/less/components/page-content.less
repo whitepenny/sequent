@@ -364,7 +364,6 @@
 
   .alignleft,
   .alignright {
-    max-width: 50%;
 
     @media @min_md {
       max-width: 75%;
@@ -380,23 +379,26 @@
   }
 
   .alignleft {
-    
+    margin-bottom: 25px;
     @media @min_md {
       .left;  
+      margin: 0 60px 25px 0;
     }
     
 
-    margin: 0 60px 25px 0;
+    
   }
 
   .alignright {
 
+    margin-bottom: 25px;
     @media @min_md {
       .right;  
+      margin: 0 0 25px 60px;
     }
     
 
-    margin: 0 0 25px 60px;
+    
   }
 
   .aligncenter {
