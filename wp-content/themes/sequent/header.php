@@ -46,6 +46,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <span class="icon logo_main"></span>
               <span class="screenreader"><?php echo $main_title; ?></span>
             </a>
+            
+            <?php if(!is_page_template( 'page-landing.php' )): ?>
+
             <div class="main_nav">
               <?php sl_main_navigation( 2 ); ?>
             </div>
@@ -56,6 +59,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <span class="screenreader">Menu</span>
             </button>
           </div>
+          <?php endif; ?>
         </div>
 
 
