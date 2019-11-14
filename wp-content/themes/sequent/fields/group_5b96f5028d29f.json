@@ -30,7 +30,7 @@
             "label": "Image",
             "name": "post_image",
             "type": "image",
-            "instructions": "",
+            "instructions": "Min 1220x686px",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -57,6 +57,13 @@
                 "operator": "==",
                 "value": "post"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "resource"
+            }
         ]
     ],
     "menu_order": 0,
@@ -67,5 +74,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1539297870
+    "modified": 1573670012
 }

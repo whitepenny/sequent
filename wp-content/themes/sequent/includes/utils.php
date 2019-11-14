@@ -97,6 +97,7 @@ function sl_get_cpt() {
     'corporate_workshop',
     'public_workshop',
     'public_session',
+    'resource',
   );
 
   foreach ( $types as $type ) {

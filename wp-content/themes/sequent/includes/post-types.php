@@ -17,6 +17,8 @@ function sl_register_post_types() {
   $corporate_workshop_slug = trim( str_ireplace( $home_url, '', get_permalink( $corporate_workshop_root_id ) ), '/' );
   $public_workshop_root_id = $np_options['public_workshop']['post_type_page_assignment_page_id'];
   $public_workshop_slug = trim( str_ireplace( $home_url, '', get_permalink( $public_workshop_root_id ) ), '/' );
+  $resource_root_id = $np_options['resource']['post_type_page_assignment_page_id'];
+  $resource_slug = trim( str_ireplace( $home_url, '', get_permalink( $resource_root_id ) ), '/' );
 
   $slugs = array(
     'team' => $team_slug,
@@ -25,6 +27,8 @@ function sl_register_post_types() {
     'corporate_workshop_id' => $corporate_workshop_root_id,
     'public_workshop' => $public_workshop_slug,
     'public_workshop_id' => $public_workshop_root_id,
+    'resource' => $resource_slug,
+    'resource_id' => $resource_root_id,
   );
 
   // Team
@@ -76,6 +80,57 @@ function sl_register_post_types() {
   ) );
 
   register_taxonomy_for_object_type( 'team_type', 'team' );
+
+  // Resources
+
+  register_taxonomy( 'resource_topic', 'resource', array(
+    'labels'            => array(
+      'name'            => 'Topics',
+      'add_new_item'    => 'Add New Topic',
+      'new_item_name'   => 'New Topic',
+    ),
+    'show_ui'           => true,
+    'show_tagcloud'     => false,
+    'show_admin_column' => true,
+    'hierarchical'      => true,
+    'rewrite'           => array(
+      'slug'            => $slugs['resource'] . '/topics',
+      'with_front'      => false,
+    ),
+  ) );
+
+  register_post_type( 'resource', array(
+    'labels'              => array(
+      'name'              => 'Resources',
+      'singular_name'     => 'Resource',
+      'add_new'           => 'Add New Resource',
+      'add_new_item'      => 'Add New Resource',
+      'edit_item'         => 'Edit Resource',
+    ),
+    'description'         => '',
+    'menu_icon'           => 'dashicons-groups',
+    'menu_position'       => '21',
+    'public'              => true,
+    'show_ui'             => true,
+    'has_archive'         => true,
+    'show_in_menu'        => true,
+    'show_in_nav_menus'   => false,
+    'exclude_from_search' => false,
+    'publicly_queryable'  => true,
+    'capability_type'     => 'post',
+    'capabilities'        => array(),
+    'supports'            => array( 'title', 'editor', 'revisions' ),
+    'map_meta_cap'        => true,
+    'map_meta_cap'        => true,
+    'hierarchical'        => false,
+    'rewrite'             => array(
+      'slug'              => $slugs['resource'],
+      'with_front'        => false,
+    ),
+    'query_var'           => true,
+  ) );
+
+  register_taxonomy_for_object_type( 'resource_topic', 'resource' );
 
   // Corportate Workshops
   register_post_type( 'corporate_workshop', array(
@@ -197,7 +252,8 @@ function sl_register_post_types() {
   if ( empty( $old_slugs ) || (
     $slugs['team'] != $old_slugs['team'] ||
     $slugs['corporate_workshop'] != $old_slugs['corporate_workshop'] ||
-    $slugs['public_workshop'] != $old_slugs['public_workshop']
+    $slugs['public_workshop'] != $old_slugs['public_workshop'] ||
+    $slugs['resource'] != $old_slugs['resource']
   ) ) {
     flush_rewrite_rules();
     update_option( 'sl_post_type_slugs', $slugs );
