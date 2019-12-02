@@ -13,8 +13,8 @@ if ( have_posts() ) :
 ?>
 <?php get_template_part( 'layouts/page_header' ); ?>
 <?php if ( ! empty( $content ) ) : ?>
-<div class="fs-row fs-all-justify-center page_main">
-  <div class="fs-cell fs-lg-11 fs-xl-10 page_container page_container_full">
+<div class="fs-row padded_row page_main full-width-page-intro">
+  <div class="fs-cell fs-lg-10 fs-xl-8 page_container page_container_full">
     <div class="page_content">
       <?php the_content(); ?>
     </div>

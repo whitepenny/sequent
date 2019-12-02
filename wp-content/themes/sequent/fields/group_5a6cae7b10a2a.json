@@ -446,6 +446,75 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5dd58ae4c0c46": {
+                    "key": "layout_5dd58ae4c0c46",
+                    "name": "wistia",
+                    "label": "Wistia",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5dd58af5c0c47",
+                            "label": "Videos",
+                            "name": "videos",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5dd58b0fc0c48",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5dd58b18c0c49",
+                                    "label": "Video",
+                                    "name": "video",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": "",
+                                    "new_lines": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5c697c92762d5": {
                     "key": "layout_5c697c92762d5",
                     "name": "cube_callout",
@@ -874,7 +943,11 @@
                             },
                             "choices": {
                                 "1": "Contact Form",
-                                "2": "Newsletter Signup"
+                                "2": "Newsletter Signup",
+                                "3": "Landing Page",
+                                "4": "Landing Page - MPM Book Form",
+                                "5": "Landing Page - Exec Breakfast Form",
+                                "6": "Landing Page - Template Download"
                             },
                             "default_value": [],
                             "allow_null": 0,
@@ -1234,5 +1307,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1550418762
+    "modified": 1574275887
 }
