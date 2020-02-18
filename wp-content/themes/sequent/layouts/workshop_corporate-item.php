@@ -2,7 +2,7 @@
 $post_image = get_field( 'page_image' );
 $intro = get_field( 'intro' );
 ?>
-<div class="workshop_item fs-cell" data-checkpoint-animation="fade-up" data-checkpoint-container=".workshop_list">
+<div class="workshop_item fs-cell fs-md-3 fs-lg-4" data-checkpoint-animation="fade-up" data-checkpoint-container=".workshop_list">
   <?php if ( ! empty( $post_image ) ) : ?>
   <?php sl_responsive_image( sl_image_workshop_list( $post_image['ID'] ), 'workshop_item_image' ); ?>
   <?php endif; ?>
