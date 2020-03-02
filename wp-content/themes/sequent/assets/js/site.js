@@ -33,8 +33,9 @@ document.createElement( "picture" );
       }
     });
 
-    $('.sticky').sticky({
-      offset: 50
+    $('.vertical_sidebar').sticky({
+      offset: 50,
+      minWidth: "980px"
     });
 
     // $(window).on("scroll", function() {

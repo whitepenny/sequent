@@ -35,7 +35,7 @@ if ( have_posts() ) :
   </div>
 
   <div class="fs-cell fs-lg-4">
-    <div class="sticky vertical_sidebar" data-sticky-container=".vertical_main">
+    <div class="sticky vertical_sidebar">
       <div class="vertical_sidebar--header">
         <i class="icon icon_calendar"></i> Schedule a Consultation
       </div>
