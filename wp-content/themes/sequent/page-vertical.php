@@ -40,7 +40,9 @@ if ( have_posts() ) :
         <i class="icon icon_calendar"></i> Schedule a Consultation
       </div>
 
-      <?php echo do_shortcode( '[gravityform id="7" title="false" description="false" ajax="true" tabindex="49" field_values="check=First Choice,Second Choice"]' ); ?>
+      <?php $form_id = get_field('form_id'); ?>
+
+      <?php echo do_shortcode( '[gravityform id="' . $form_id . '" title="false" description="false" ajax="true" tabindex="49" field_values="check=First Choice,Second Choice"]' ); ?>
     </div>
   </div>
 </div>
