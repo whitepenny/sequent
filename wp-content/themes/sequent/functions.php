@@ -152,7 +152,7 @@ function sl_gform_submit_button_consultation( $button, $form ) {
   return '<button class="button" id="gform_submit_button_' . $form['id'] . '"><span>Schedule a Consultation</span></button>';
 }
 
-add_filter( 'gform_submit_button_7', 'sl_gform_submit_button_consultation', 10, 2 );
+add_filter( 'gform_submit_button_12', 'sl_gform_submit_button_consultation', 10, 2 );
 
 // Pagination
 
