@@ -203,7 +203,10 @@
             "choices": {
                 "1": "Contact Form",
                 "2": "Newsletter Signup",
-                "3": "SEO Header"
+                "3": "Landing Page",
+                "4": "Landing Page - MPM Book Form",
+                "5": "Landing Page - Exec Breakfast Form",
+                "6": "Landing Page - Template Download"
             },
             "default_value": [],
             "allow_null": 0,
@@ -245,5 +248,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1550429070
+    "modified": 1582641163
 }

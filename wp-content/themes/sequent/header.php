@@ -47,7 +47,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <span class="screenreader"><?php echo $main_title; ?></span>
             </a>
             
-            <?php if(!is_page_template( 'page-landing.php' )): ?>
+            <?php if(
+              !is_page_template( 'page-landing.php' ) && !is_page_template( 'page-vertical.php' )
+            ): ?>
 
             <div class="main_nav">
               <?php sl_main_navigation( 2 ); ?>

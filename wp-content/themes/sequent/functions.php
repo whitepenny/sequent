@@ -139,6 +139,7 @@ add_action( 'gform_enqueue_scripts', 'sl_deregister_gravity_forms_resources' );
 
 add_filter( 'gform_confirmation_anchor', '__return_true' );
 add_filter( 'gform_init_scripts_footer', '__return_true' );
+add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
 
 
 // Gravity Forms button
@@ -147,6 +148,11 @@ function sl_gform_submit_button( $button, $form ) {
 }
 add_filter( 'gform_submit_button', 'sl_gform_submit_button', 10, 2 );
 
+function sl_gform_submit_button_consultation( $button, $form ) {
+  return '<button class="button" id="gform_submit_button_' . $form['id'] . '"><span>Schedule a Consultation</span></button>';
+}
+
+add_filter( 'gform_submit_button_7', 'sl_gform_submit_button_consultation', 10, 2 );
 
 // Pagination
 

@@ -2,11 +2,13 @@
 
 //=require formstone/dist/js/core.js
 //=require formstone/dist/js/background.js
+//=require formstone/dist/js/sticky.js
 //=require formstone/dist/js/checkpoint.js
 //=require formstone/dist/js/mediaquery.js
 //=require formstone/dist/js/navigation.js
 //=require formstone/dist/js/swap.js
 //=require formstone/dist/js/transition.js
+
 
 document.createElement( "picture" );
 
@@ -29,6 +31,10 @@ document.createElement( "picture" );
       if (url) {
         window.location.href = url;
       }
+    });
+
+    $('.sticky').sticky({
+      offset: 50
     });
 
     // $(window).on("scroll", function() {

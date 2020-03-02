@@ -1,0 +1,132 @@
+.vertical_intro {
+    padding-bottom: 50px;
+    border-bottom: 1px solid @gray_10;
+    margin-bottom: 50px;
+    h1 {
+        font-size: 22px;
+        color: @blue_dark;
+        font-weight: normal;
+        span {
+            display: block;
+            font-size: 36px;
+            .chronicle_bold;
+            line-height: 1.1em;
+
+            @media @min_md {
+                font-size: 46px;
+            }
+
+            @media @min_lg {
+                font-size: 56px;
+            }
+        }
+    }
+}
+
+.vertical_content {
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+    h1, h2, h3, h4 {
+        margin: 0;
+        padding: 0;
+    }
+    h2 {
+        color: @blue_dark;
+        font-size: 32px;
+        font-weight: normal;
+    }
+
+    h3 {
+        color: @blue_dark;       
+        display: block;
+        font-size: 36px;
+        .chronicle_bold;
+        line-height: 1.1em;
+
+        @media @min_md {
+            font-size: 46px;
+        }
+    
+    }
+
+    h4 {
+        .avenir_black;
+
+        color: @black;
+        font-size: 18px;
+
+        @media @min_lg {
+        font-size: 20px;
+        }
+    }
+
+    p {
+        margin-bottom: 50px;
+        font-size: 18px;
+        line-height: 1.75em;
+    }
+
+    .logo-row {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+
+        li {
+            width: 30%;
+        }
+
+    }
+}
+
+.vertical_sidebar {
+    background: @blue_lighter;
+    padding: 40px;
+    
+    .vertical_sidebar--header {
+        display: flex;
+        color: #fff;
+        margin-bottom: 20px;
+        .icon {
+            margin-right: 10px;
+        }
+    }
+
+
+}
+
+.vertical_sidebar .gform_wrapper {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    label {
+        .block;
+        .screenreader;
+    }
+
+    input[type='text'],
+      input[type='tel'],
+      input[type='email'],
+      input[type='url'],
+      textarea,
+      select {
+        background: #fff;
+        border: 0;
+        padding: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+
+    button {
+        .button_blue;
+    }
+}
