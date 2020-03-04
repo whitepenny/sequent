@@ -2,7 +2,7 @@
 
 namespace SevenShores\Hubspot\Resources;
 
-class Files extends Resource
+class Files extends Resourcex
 {
     /**
      * Upload a new file.

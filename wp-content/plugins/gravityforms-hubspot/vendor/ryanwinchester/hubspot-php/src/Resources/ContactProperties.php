@@ -2,7 +2,7 @@
 
 namespace SevenShores\Hubspot\Resources;
 
-class ContactProperties extends Resource
+class ContactProperties extends Resourcex
 {
     /**
      * Get all Contact properties.

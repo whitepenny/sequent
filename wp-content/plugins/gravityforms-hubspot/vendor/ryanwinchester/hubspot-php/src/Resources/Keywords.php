@@ -2,7 +2,7 @@
 
 namespace SevenShores\Hubspot\Resources;
 
-class Keywords extends Resource
+class Keywords extends Resourcex
 {
     /**
      * Get all keywords.

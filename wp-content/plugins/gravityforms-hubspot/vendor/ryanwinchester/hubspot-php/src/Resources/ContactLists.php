@@ -2,7 +2,7 @@
 
 namespace SevenShores\Hubspot\Resources;
 
-class ContactLists extends Resource
+class ContactLists extends Resourcex
 {
     /**
      * Create a new contact list.

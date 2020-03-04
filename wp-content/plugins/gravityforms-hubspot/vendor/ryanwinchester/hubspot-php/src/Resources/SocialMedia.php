@@ -2,7 +2,7 @@
 
 namespace SevenShores\Hubspot\Resources;
 
-class SocialMedia extends Resource
+class SocialMedia extends Resourcex
 {
     /**
      * Get all publishing channels.

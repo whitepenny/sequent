@@ -219,7 +219,7 @@ function unwrap($promises)
 function all($promises)
 {
     $results = [];
-    return each(
+    return eachFunc(
         $promises,
         function ($value, $idx) use (&$results) {
             $results[$idx] = $value;
@@ -254,7 +254,7 @@ function some($count, $promises)
     $results = [];
     $rejections = [];
 
-    return each(
+    return eachFunc(
         $promises,
         function ($value, $idx, PromiseInterface $p) use (&$results, $count) {
             if ($p->getState() !== PromiseInterface::PENDING) {
@@ -310,7 +310,7 @@ function settle($promises)
 {
     $results = [];
 
-    return each(
+    return eachFunc(
         $promises,
         function ($value, $idx) use (&$results) {
             $results[$idx] = ['state' => PromiseInterface::FULFILLED, 'value' => $value];
@@ -343,7 +343,7 @@ function settle($promises)
  *
  * @return PromiseInterface
  */
-function each(
+function eachFunc(
     $iterable,
     callable $onFulfilled = null,
     callable $onRejected = null

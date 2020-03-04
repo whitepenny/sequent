@@ -2,7 +2,7 @@
 
 namespace SevenShores\Hubspot\Resources;
 
-class DealProperties extends Resource
+class DealProperties extends Resourcex
 {
 
     /**

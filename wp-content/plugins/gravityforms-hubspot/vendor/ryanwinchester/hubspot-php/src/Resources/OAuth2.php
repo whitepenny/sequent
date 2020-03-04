@@ -2,7 +2,7 @@
 
 namespace SevenShores\Hubspot\Resources;
 
-class OAuth2 extends Resource
+class OAuth2 extends Resourcex
 {
 	protected $endpoint = 'https://api.hubapi.com/oauth/v1';
 

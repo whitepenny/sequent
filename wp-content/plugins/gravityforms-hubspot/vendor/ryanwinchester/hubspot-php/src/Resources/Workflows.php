@@ -2,7 +2,7 @@
 
 namespace SevenShores\Hubspot\Resources;
 
-class Workflows extends Resource
+class Workflows extends Resourcex
 {
     /**
      * Get all workflows.

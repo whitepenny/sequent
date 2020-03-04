@@ -3,8 +3,9 @@ Contributors: Big Sea, Soben
 Donate link: http://bigsea.co/
 Tags: hubspot, gravity, forms, submit, submission, lead, api, gravity forms
 Requires at least: 3.5
-Tested up to: 4.9.6
-Stable tag: 4.1.1
+Tested up to: 5.2.2
+Stable tag: 4.2.1
+PHP compatibility: 5.5 - 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,6 +60,10 @@ On top of that, HubSpot's oAuth 2.0 connectivity REQUIRES a secured URL to redir
 
 We kept the API Key feature in earlier versions of our plugin as a "just in case"... HubSpot's switch to oAuth 2.0 required such an overhaul of the plugin, that we have chosen to drop support for it.
 
+= Is this plugin php 7.2 compatible? =
+
+Yes! We have tested it and it is compatible with php 7.2.
+
 == Screenshots ==
 
 1. The Location of your HubSpot settings on a per-form basis. It can be found by hovering over the "Settings" text, or clicking settings and then clicking "HubSpot"
@@ -67,6 +72,15 @@ We kept the API Key feature in earlier versions of our plugin as a "just in case
 1. HubSpot settings found in Forms > Settings > HubSpot
 
 == Changelog ==
+
+= 4.2.1 =
+* [FIX] Fixed issue with submissions going to Hubspot without feed setup
+* [UPDATE] Updated Resource class name to be PHP 7.2 compliant
+
+= 4.2 =
+* [FIX] We have resolved the $feed issue that caused errors.
+* [FIX] We resolved the each() warning thrown by the php 7 compatibility checker.
+* [UPDATE] We are aware of the Resource warning thrown by the php 7 compatibility checker and have tested it. The plugin still works as expected and does not break anything. We will be tackling that issue in an upcoming release.
 
 = 4.1.1 =
 * [FIX] Modification of strtok, via adammichaelroach

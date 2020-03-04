@@ -2,7 +2,7 @@
 
 namespace SevenShores\Hubspot\Resources;
 
-class BlogTopics extends Resource
+class BlogTopics extends Resourcex
 {
 
     /**

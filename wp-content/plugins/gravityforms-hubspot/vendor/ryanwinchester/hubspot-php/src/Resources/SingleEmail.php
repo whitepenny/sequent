@@ -2,7 +2,7 @@
 
 namespace SevenShores\Hubspot\Resources;
 
-class SingleEmail extends Resource
+class SingleEmail extends Resourcex
 {
     /**
      * Send an email designed and maintained in the HubSpot marketing Email Tool.

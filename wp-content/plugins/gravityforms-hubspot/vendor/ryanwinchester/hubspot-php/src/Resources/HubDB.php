@@ -2,7 +2,7 @@
 
 namespace SevenShores\Hubspot\Resources;
 
-class HubDB extends Resource
+class HubDB extends Resourcex
 {
     /**
      * Get all tables

@@ -6,7 +6,7 @@ namespace SevenShores\Hubspot\Resources;
  * Class Owners
  * @package SevenShores\Hubspot\Resources
  */
-class Owners extends Resource
+class Owners extends Resourcex
 {
     /**
      * @param array $properties

@@ -3,7 +3,7 @@ namespace SevenShores\Hubspot\Resources;
 
 use SevenShores\Hubspot\Exceptions\HubspotException;
 
-class Deals extends Resource
+class Deals extends Resourcex
 {
     /**
      * @param array $deal Array of deal properties.

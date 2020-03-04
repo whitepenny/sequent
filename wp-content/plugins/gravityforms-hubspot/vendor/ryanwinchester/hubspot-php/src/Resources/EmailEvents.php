@@ -2,7 +2,7 @@
 
 namespace SevenShores\Hubspot\Resources;
 
-class EmailEvents extends Resource
+class EmailEvents extends Resourcex
 {
     /**
      * Get campaign IDs for a portal.

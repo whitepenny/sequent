@@ -2,7 +2,7 @@
 
 namespace SevenShores\Hubspot\Resources;
 
-class Engagements extends Resource
+class Engagements extends Resourcex
 {
     /**
      * @param array $engagement Array of engagement engagement.

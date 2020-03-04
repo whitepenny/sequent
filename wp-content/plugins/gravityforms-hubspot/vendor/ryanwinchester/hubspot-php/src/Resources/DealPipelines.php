@@ -1,7 +1,7 @@
 <?php
 namespace SevenShores\Hubspot\Resources;
 
-class DealPipelines extends Resource {
+class DealPipelines extends Resourcex {
 
     public function getAllPipelines()
     {

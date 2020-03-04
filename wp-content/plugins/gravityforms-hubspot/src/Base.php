@@ -250,8 +250,10 @@ class Base extends \GFFeedAddOn {
     {
         $data = (array)$data;
 
-        if (function_exists('rgars') && rgars($feed, 'meta/formID')) {
-            return rgars($feed, 'meta/formID');
+        if ($feed && is_array($feed)) {
+            if (function_exists('rgars') && rgars($feed, 'meta/formID')) {
+                return rgars($feed, 'meta/formID');
+            }
         }
 
         $fieldArray = explode('/', $field);

@@ -3,7 +3,7 @@
 namespace SevenShores\Hubspot\Resources;
 
 
-class Contacts extends Resource
+class Contacts extends Resourcex
 {
     /**
      * @param array $properties Array of contact properties.

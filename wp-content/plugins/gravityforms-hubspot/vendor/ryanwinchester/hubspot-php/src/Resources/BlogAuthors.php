@@ -2,7 +2,7 @@
 
 namespace SevenShores\Hubspot\Resources;
 
-class BlogAuthors extends Resource
+class BlogAuthors extends Resourcex
 {
     /**
      * Create a new blog author.

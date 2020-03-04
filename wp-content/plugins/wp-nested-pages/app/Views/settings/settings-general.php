@@ -21,10 +21,18 @@ settings_fields( 'nestedpages-general' );
 <tr valign="top">
 	<th scope="row"><?php _e('Display Options', 'wp-nested-pages'); ?></th>
 	<td>
+		<p>
 		<label>
 			<input type="checkbox" name="nestedpages_ui[datepicker]" value="true" <?php if ( $this->settings->datepickerEnabled() ) echo 'checked'; ?> />
 			<?php _e('Enable Date Picker in Quick Edit', 'wp-nested-pages'); ?>
 		</label>
+		</p>
+		<p>
+		<label>
+			<input type="checkbox" name="nestedpages_ui[non_indent]" value="true" <?php if ( $this->settings->nonIndentEnabled() ) echo 'checked'; ?> />
+			<?php _e('Use the classic (non-indented) hierarchy display.', 'wp-nested-pages'); ?>
+		</label>
+		</p>
 	</td>
 </tr>
 <tr valign="top">
@@ -34,7 +42,7 @@ settings_fields( 'nestedpages-general' );
 		<p data-menu-enabled-option data-menu-hide-checkbox>
 		<label>
 			<input type="checkbox" name="nestedpages_ui[hide_menu_sync]" value="true" <?php if ( $this->settings->hideMenuSync() ) echo 'checked'; ?> />
-			<?php _e('Hide Menu Sync Checkbox', 'wp-nested-pages'); ?> (<?php echo esc_html($sync_status); ?>)
+			<?php printf(__('Hide Menu Sync Checkbox (%s)', 'wp-nested-pages'), esc_html__($sync_status)); ?>
 		</label>
 		</p>
 		<?php endif; ?>
@@ -64,7 +72,7 @@ settings_fields( 'nestedpages-general' );
 		<?php foreach ( $this->user_repo->allRoles() as $role ) : ?>
 		<label>
 			<input type="checkbox" name="nestedpages_allowsorting[]" value="<?php echo $role['name']; ?>" <?php if ( in_array($role['name'], $allowsorting) ) echo 'checked'; ?> >
-			<?php echo esc_html($role['label']); ?>
+			<?php echo esc_html__($role['label']); ?>
 		</label>
 		<br />
 		<?php endforeach; ?>
@@ -85,6 +93,22 @@ settings_fields( 'nestedpages-general' );
 		</div>
 		<div class="nestedpages-reset-settings-complete" style="display:none;">
 			<p><?php _e('Settings have been successfully reset.', 'wp-nested-pages'); ?></p>
+		</div>
+	</td>
+</tr>
+<tr valign="top">
+	<th scope="row"><?php _e('Reset User Preferences', 'wp-nested-pages'); ?></th>
+	<td>
+		<div class="nestedpages-reset-user-prefs">
+			<p>
+				<?php _e('Toggle states are saved for each user. This action will clear these preferences for all users. If PHP errors appear within the nested view after an update, this may help clear them.', 'wp-nested-pages'); ?>
+			</p>
+			<p>
+				<button class="np-btn np-btn-trash" data-nestedpages-reset-user-prefs><?php _e('Reset User Preferences', 'wp-nested-pages'); ?></button>
+			</p>
+		</div>
+		<div class="nestedpages-reset-user-prefs-complete" style="display:none;">
+			<p><?php _e('User preferences have been successfully reset.', 'wp-nested-pages'); ?></p>
 		</div>
 	</td>
 </tr>

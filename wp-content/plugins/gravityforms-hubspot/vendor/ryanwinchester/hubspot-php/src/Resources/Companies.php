@@ -2,7 +2,7 @@
 
 namespace SevenShores\Hubspot\Resources;
 
-class Companies extends Resource
+class Companies extends Resourcex
 {
 
     /**
