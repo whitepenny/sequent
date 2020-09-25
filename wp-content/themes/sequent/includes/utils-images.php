@@ -177,10 +177,18 @@ function sl_image_workshop_list( $image_id ) {
 }
 
 function sl_image_flexible_callout( $image_id ) {
-  $square_large  = sl_get_image( $image_id, 'square-large' );
+  $wide_xsmall = sl_get_image( $image_id, 'wide-xsmall' );
+  $wide_small  = sl_get_image( $image_id, 'wide-small' );
+  // $standard_small = sl_get_image( $image_id, 'standard-small' );
+  $standard_medium = sl_get_image( $image_id, 'standard-medium' );
+  // $standard_large = sl_get_image( $image_id, 'standard-large' );
+  $square_xlarge = sl_get_image( $image_id, 'square-xlarge' );
 
   return array(
-    'fallback'            => $square_large['src'],
+    'fallback'            => $wide_xsmall['src'],
+    '(min-width: 500px)'  => $wide_small['src'],
+    '(min-width: 740px)'  => $square_xlarge['src'],
+    '(min-width: 980px)'  => $standard_medium['src'],
   );
 }
 

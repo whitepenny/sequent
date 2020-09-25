@@ -19,6 +19,8 @@ function sl_register_post_types() {
   $public_workshop_slug = trim( str_ireplace( $home_url, '', get_permalink( $public_workshop_root_id ) ), '/' );
   $resource_root_id = $np_options['resource']['post_type_page_assignment_page_id'];
   $resource_slug = trim( str_ireplace( $home_url, '', get_permalink( $resource_root_id ) ), '/' );
+  $classes_root_id = $np_options['classes']['post_type_page_assignment_page_id'];
+  $classes_slug = trim( str_ireplace( $home_url, '', get_permalink( $classes_root_id ) ), '/' );
 
   $slugs = array(
     'team' => $team_slug,
@@ -29,6 +31,8 @@ function sl_register_post_types() {
     'public_workshop_id' => $public_workshop_root_id,
     'resource' => $resource_slug,
     'resource_id' => $resource_root_id,
+    'classes' => $classes_slug,
+    'classes_id' => $classes_root_id,
   );
 
   // Team
@@ -245,6 +249,68 @@ function sl_register_post_types() {
   ) );
 
   // register_taxonomy_for_object_type( 'public_workshop_type', 'public_workshop' );
+
+  // Classes
+  register_post_type( 'class', array(
+    'labels'              => array(
+      'name'              => 'Classes',
+      'singular_name'     => 'Class',
+      'add_new'           => 'Add New Class',
+      'add_new_item'      => 'Add New Class',
+      'edit_item'         => 'Edit Class',
+    ),
+    'description'         => '',
+    'menu_icon'           => 'dashicons-welcome-learn-more',
+    'menu_position'       => '22',
+    'public'              => true,
+    'show_ui'             => true,
+    'has_archive'         => true,
+    'show_in_menu'        => true,
+    'show_in_nav_menus'   => false,
+    'exclude_from_search' => false,
+    'publicly_queryable'  => true,
+    'capability_type'     => 'post',
+    'capabilities'        => array(),
+    'supports'            => array( 'title', 'editor', 'revisions' ),
+    'map_meta_cap'        => true,
+    'map_meta_cap'        => true,
+    'hierarchical'        => false,
+    'rewrite'             => array(
+      'slug'              => $slugs['class'],
+      'with_front'        => false,
+    ),
+    'query_var'           => true,
+  ) );
+
+  register_taxonomy( 'class_type', 'class', array(
+    'labels'            => array(
+      'name'            => 'Types',
+      'add_new_item'    => 'Add New Type',
+      'new_item_name'   => 'New Type',
+    ),
+    'show_ui'           => true,
+    'show_tagcloud'     => false,
+    'show_admin_column' => true,
+    'hierarchical'      => true,
+    'rewrite'           => false,
+  ) );
+
+  register_taxonomy_for_object_type( 'class_type', 'class' );
+
+  register_taxonomy( 'class_format', 'class', array(
+    'labels'            => array(
+      'name'            => 'Formats',
+      'add_new_item'    => 'Add New Format',
+      'new_item_name'   => 'New Format',
+    ),
+    'show_ui'           => true,
+    'show_tagcloud'     => false,
+    'show_admin_column' => true,
+    'hierarchical'      => true,
+    'rewrite'           => false,
+  ) );
+
+  register_taxonomy_for_object_type( 'class_format', 'class' );
 
   //
 

@@ -20,13 +20,40 @@
                 "image": "Image",
                 "form": "Form"
             },
-            "default_value": [],
+            "default_value": false,
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_5f6be05c8f7c5",
+            "label": "Page Subtitle",
+            "name": "page_subtitle",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c69772dc0d30",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_59d6497717c50",
@@ -127,7 +154,7 @@
                         "blue_light": "Light Blue",
                         "blue_lighter": "Sky Blue"
                     },
-                    "default_value": [],
+                    "default_value": false,
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 0,
@@ -203,18 +230,34 @@
             "choices": {
                 "1": "Contact Form",
                 "2": "Newsletter Signup",
-                "3": "Landing Page",
-                "4": "Landing Page - MPM Book Form",
-                "5": "Landing Page - Exec Breakfast Form",
-                "6": "Landing Page - Template Download"
+                "3": "SEO Header"
             },
-            "default_value": [],
+            "default_value": false,
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_5f6bdcba68d5c",
+            "label": "Page Subnav",
+            "name": "page_hide_subnav",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Hide",
+            "ui_off_text": "Show"
         }
     ],
     "location": [
@@ -246,7 +289,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1582641163
+    "modified": 1600905329
 }

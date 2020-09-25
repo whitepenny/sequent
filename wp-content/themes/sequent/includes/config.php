@@ -12,6 +12,6 @@ if ( strpos( $sl_page_url, '?') > -1 ) {
 
 // Globals
 
-define( 'SL_VERSION', '1.2.1' );
+define( 'SL_VERSION', '1.3.0' );
 define( 'SL_DEBUG', true );
 define( 'SL_DEV', ( strpos( $sl_page_url, '.test') !== false || strpos( $sl_page_url, 'localhost') !== false ) );

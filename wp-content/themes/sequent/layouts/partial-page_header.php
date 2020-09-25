@@ -103,7 +103,7 @@ else :
       </span>
       <?php if ( ! empty( $page_meta ) ) : ?>
       <div class="page_meta">
-        <?php echo $page_meta; ?>
+        <span><?php echo $page_meta; ?></span>
       </div>
       <?php endif; ?>
       <h1 class="page_title">

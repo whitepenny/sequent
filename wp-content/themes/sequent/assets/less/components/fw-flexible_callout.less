@@ -1,0 +1,148 @@
+.flexible_callout {
+  margin: 60px 0;
+
+  @media @min_md {
+    margin: 80px 0;
+  }
+
+  @media @min_lg {
+    margin: 100px 0;
+  }
+}
+
+.page_main + .flexible_callout {
+  margin-top: 40px;
+}
+
+.flexible_callout {
+
+  &.gravity_right {
+
+    .flexible_callout_image {
+
+      @media @min_md {
+        .left;
+
+        margin-left: -100px;
+        margin-right: auto;
+      }
+
+      @media @min_lg {
+        margin-left: -140px;
+        margin-right: auto;
+      }
+
+      @media @min_xl {
+        margin-left: -180px;
+        margin-right: auto;
+      }
+    }
+
+    .flexible_callout_container {
+
+      @media @min_md {
+        border-left-width: 0;
+        border-right: 6px solid @blue_lighter;
+      }
+
+      @media @min_lg {
+        margin-left: auto;
+        // margin-right: -100px;
+      }
+    }
+  }
+}
+
+.flexible_callout_media {}
+
+.flexible_callout_image {
+
+  @media @min_md {
+    .right;
+
+    width: 200%;
+
+    margin-right: -100px;
+  }
+
+  @media @min_lg {
+    width: 160%;
+
+    margin-right: -140px;
+  }
+
+  @media @min_xl {
+    margin-right: -180px;
+  }
+}
+
+.flexible_callout_container {
+  .relative;
+
+  z-index: 1;
+
+  background: @white;
+  margin: 20px 0;
+
+  @media @min_md {
+    border-left: 6px solid @blue_lighter;
+    margin: 40px 0;
+    padding: 60px;
+  }
+
+  @media @min_lg {
+    padding: 60px 80px;
+  }
+
+  @media @min_xl {
+    padding: 80px 100px;
+  }
+}
+
+.flexible_callout_title {
+  .chronicle_bold;
+
+  color: @blue_dark;
+  font-size: 32px;
+  line-height: 1.1;
+  margin: 0 0 20px;
+
+  @media @min_md {
+    margin: 0;
+  }
+
+  @media @min_lg {
+    font-size: 44px;
+  }
+
+  @media @min_xl {
+    font-size: 50px;
+  }
+}
+
+.flexible_callout_content {
+
+  p {
+    .avenir;
+
+    color: @black;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+
+    @media @min_md {
+      font-size: 16px;
+    }
+  }
+}
+
+.flexible_callout_button {
+  .button_blue_lighter;
+  .button_large;
+
+  margin: 20px 0 0;
+
+  @media @min_md {
+    .inline_block;
+  }
+}

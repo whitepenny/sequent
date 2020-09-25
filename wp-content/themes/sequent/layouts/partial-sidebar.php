@@ -1,8 +1,11 @@
 <?php
-$navigation_options = array(
-  'label'    => false,
-  'maxWidth' => '980px',
-);
+$hide_subnav = get_field( 'page_hide_subnav' );
+
+if ( empty( $hide_subnav ) ) :
+  $navigation_options = array(
+    'label'    => false,
+    'maxWidth' => '980px',
+  );
 ?>
 <div class="subnav_container">
   <button type="button" class="subnav_handle js-sub_nav_handle"><span></span>In This Section</button>
@@ -10,3 +13,5 @@ $navigation_options = array(
     <?php sl_sub_navigation( 99 ); ?>
   </div>
 </div>
+<?php
+endif;

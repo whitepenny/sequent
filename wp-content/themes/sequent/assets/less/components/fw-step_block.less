@@ -1,0 +1,141 @@
+.step_block {
+
+  .fs-row.step_content_items {
+
+    @media @min_lg {
+      padding-left: 0;
+      padding-right: 0;
+      transform: translate(2%, 0);
+    }
+  }
+}
+
+.step_item_alt {
+  .relative;
+
+  @media @min_md @and_max_lg {
+    margin: 20px 0;
+  }
+
+  &:last-child {
+
+    .step_item_arrow {
+      display: none;
+    }
+  }
+
+  .step_item_marker {
+    .avenir_black;
+    .block;
+    .relative;
+
+    height: 30px;
+    width: 30px;
+
+    background: @blue_mid;
+    border-radius: 100%;
+    color: @white;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 12px 15px 0 0;
+    text-align: center;
+
+    @media @min_md {
+      height: 50px;
+      width: 50px;
+
+      font-size: 28px;
+      line-height: 50px;
+      margin: 0 0 20px;
+    }
+  }
+
+  .step_item_arrow {
+    .absolute;
+
+    top: 23px;
+    right: 20px;
+    left: 50px;
+
+    height: 2px;
+
+    background: @blue_lighter;
+
+    @media @min_md {
+      left: 80px;
+    }
+
+    @media @max_lg {
+      display: none;
+    }
+
+    &:after {
+      .absolute;
+
+      height: 0;
+      width: 0;
+
+      top: -5px;
+      right: -10px;
+
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-left: 10px solid @blue_lighter;
+      content: '';
+    }
+  }
+
+  .step_item_label {
+    .chronicle_bold;
+
+    color: @blue_dark;
+    font-size: 28px;
+    line-height: 1.2;
+    margin: 0 0 15px;
+
+    @media @min_lg {
+      font-size: 32px;
+    }
+  }
+
+  // .step_item_content {
+  //   .contain;
+
+  //   @media @max_md {
+  //     padding: 10px 0;
+  //   }
+
+  //   p {
+  //     .avenir;
+
+  //     color: @black;
+  //     font-size: 14px;
+  //     line-height: 1.6;
+  //     margin: 0 0 10px;
+
+  //     @media @min_md {
+  //       font-size: 16px;
+  //     }
+  //   }
+  // }
+
+
+
+  // .step_item_link {
+  //   .avenir_black;
+  //   .inline_block;
+
+  //   color: @blue_light;
+  //   font-size: 16px;
+  //   margin: 5px 0 10px;
+
+  //   @media @min_md {
+  //     font-size: 18px;
+  //   }
+
+  //   &:hover {
+  //     color: @black;
+  //   }
+  // }
+
+}

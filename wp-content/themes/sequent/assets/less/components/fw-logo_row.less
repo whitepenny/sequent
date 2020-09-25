@@ -1,6 +1,54 @@
 .logo_row {
   background: @gray_5;
+  margin: 10px;
   padding: 20px 0;
+
+  @media @min_md {
+    margin: 20px;
+  }
+
+  @media @min_lg {
+    margin: 30px;
+  }
+
+  @media @min_xl {
+    margin: 40px;
+  }
+}
+
+.logo_row_cell {
+  text-align: center;
+
+  @media @min_md {
+    .flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+
+.logo_row_title {
+  .avenir_black;
+  .inline_block;
+
+  border-bottom: 2px solid @blue_lighter;
+  color: @blue_mid;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  margin: 0 0 15px;
+  padding: 0;
+  text-transform: uppercase;
+
+  @media @max_md {
+    margin: 10px 0 30px;
+  }
+
+  @media @min_md {
+    flex-shrink: 1;
+
+    margin: 0 30px 0 0;
+  }
 }
 
 .logo_row_items {
@@ -8,11 +56,12 @@
 
   align-items: center;
   flex-wrap: wrap;
+  flex-grow: 1;
   justify-content: space-around;
 }
 
 .logo_row_item {
-  min-width: 100px;
+  min-width: 80px;
   max-width: 260px;
 
   align-items: center;
