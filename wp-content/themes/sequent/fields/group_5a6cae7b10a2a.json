@@ -1003,6 +1003,21 @@
                             "toggle": 0,
                             "return_format": "value",
                             "save_custom": 0
+                        },
+                        {
+                            "key": "field_606c6163da155",
+                            "label": "Button",
+                            "name": "button",
+                            "type": "link",
+                            "instructions": "Overrides default link.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
                         }
                     ],
                     "min": "",
@@ -1585,7 +1600,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": 1,
     "description": "",
-    "modified": 1600907160
+    "modified": 1617715748
 }

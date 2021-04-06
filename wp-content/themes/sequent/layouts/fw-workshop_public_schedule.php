@@ -2,6 +2,7 @@
 
 $hide_title = get_sub_field( 'hide_title' );
 $hide_button = get_sub_field( 'hide_button' );
+$button = get_sub_field( 'button' );
 
 if ( is_post_type_archive( 'public_workshop' ) ) {
   $hide_button = array( 'on' );
@@ -111,7 +112,11 @@ $workshops = get_posts( array(
       </div>
       <?php if ( empty( $hide_button ) || $hide_button[0] != 'on' ) : ?>
       <div class="public_schedule_footer">
+        <?php if ( ! empty( $button ) ) : ?>
+        <a href="<?php echo $button['url']; ?>" class="public_schedule_button" target="<?php echo $button['target']; ?>"><?php echo $button['title']; ?></a>
+        <?php else: ?>
         <a href="<?php echo $button_link; ?>" class="public_schedule_button">Learn About Public Workshops</a>
+        <?php endif; ?>
       </div>
       <?php endif; ?>
     </div>
