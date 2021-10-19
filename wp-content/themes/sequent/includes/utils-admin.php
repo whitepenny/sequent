@@ -7,60 +7,7 @@ function sl_admin_init() {
 }
 add_action( 'admin_init', 'sl_admin_init' );
 
-function sl_admin_head() {
-  $screen = get_current_screen();
 
-  // Callouts
-  $post_types = array(
-    'callout',
-  );
-
-  if ( is_object( $screen ) && in_array( $screen->post_type, $post_types) ) {
-    ?>
-    <style>
-      #titlewrap { height: 0px !important; overflow: hidden !important; }
-      #post-body-content { margin-bottom: 1px !important; }
-    </style>
-    <?php
-  }
-
-  // ACF Content Editor
-  ?>
-  <script>
-    (function($) {
-      $(document).ready(function() {
-        var fields = [
-          ".acf-field-5adba8b1f0c91",
-        ];
-        var $postContent = $( fields.join(", ") );
-
-        if ( $postContent.length ) {
-          $postContent.find(".acf-input").append( $("#postdivrich") );
-        }
-
-        $(".acf-field.readonly select").attr("tabindex", "-1");
-      });
-    })(jQuery);
-  </script>
-  <style type="text/css">
-    .acf-field #wp-content-editor-tools {
-      background: transparent;
-      padding-top: 0;
-    }
-
-    .acf-field.readonly {
-      pointer-events: none !important;
-    }
-    .acf-field.readonly .select2-selection {
-      border: none !important;
-    }
-    .acf-field.readonly .select2-selection__arrow {
-      display: none !important;
-    }
-  </style>
-  <?php
-}
-add_action( 'admin_head', 'sl_admin_head' );
 
 
 // Set menu order
@@ -217,43 +164,43 @@ add_filter( 'acf/load_field/name=page_gravity_form', 'sl_populate_gravity_forms_
 
 // Pre Load Workshop Session Links
 
-function sl_load_value_session_workshops( $value, $post_id, $field ) {
-  if ( empty( $value ) ) {
-    $value = array();
-  }
+// function sl_load_value_session_workshops( $value, $post_id, $field ) {
+//   if ( empty( $value ) ) {
+//     $value = array();
+//   }
 
-  $parsed = array();
+//   $parsed = array();
 
-  $workshops = get_posts( array(
-    'post_type' => 'public_workshop',
-    'posts_per_page' => -1,
-    'orderby' => 'menu_order',
-    'order' => 'ASC',
-  ) );
+//   $workshops = get_posts( array(
+//     'post_type' => 'public_workshop',
+//     'posts_per_page' => -1,
+//     'orderby' => 'menu_order',
+//     'order' => 'ASC',
+//   ) );
 
-  foreach ( $workshops as $workshop ) {
-    $existing = false;
+//   foreach ( $workshops as $workshop ) {
+//     $existing = false;
 
-    foreach ( $value as $v ) {
-      if ( ! empty( $v['field_5bb8ef24aaf5b'] ) && $v['field_5bb8ef24aaf5b'] == $workshop->ID ) {
-        $existing = $v;
-        break;
-      }
-    }
+//     foreach ( $value as $v ) {
+//       if ( ! empty( $v['field_5bb8ef24aaf5b'] ) && $v['field_5bb8ef24aaf5b'] == $workshop->ID ) {
+//         $existing = $v;
+//         break;
+//       }
+//     }
 
-    if ( ! empty( $existing ) ) {
-      $parsed[] = $existing;
-    } else {
-      $parsed[] = array(
-        'field_5bb8ef24aaf5b' => $workshop->ID,
-        'field_5bb8ef3daaf5c' => '',
-      );
-    }
-  }
+//     if ( ! empty( $existing ) ) {
+//       $parsed[] = $existing;
+//     } else {
+//       $parsed[] = array(
+//         'field_5bb8ef24aaf5b' => $workshop->ID,
+//         'field_5bb8ef3daaf5c' => '',
+//       );
+//     }
+//   }
 
-  return $parsed;
-}
-add_filter( 'acf/load_value/name=session_workshops', 'sl_load_value_session_workshops', 10, 3 );
+//   return $parsed;
+// }
+// add_filter( 'acf/load_value/name=session_workshops', 'sl_load_value_session_workshops', 10, 3 );
 
 
 // Populate color in ACF

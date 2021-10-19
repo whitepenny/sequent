@@ -103,8 +103,6 @@
   }
 }
 
-.schedule_table_rows {}
-
 .schedule_table_row {
   background: transparent;
   padding: 20px;
@@ -161,14 +159,35 @@
 
   @media @min_lg {
     .flex;
-
-    width: 50%;
-
-    flex: 0 0 50%;
+    width: 80%;
+    justify-content: space-between;
   }
 }
 
+.schedule_table_cell {
+  font-size: 16px;
+  color: @gray_70;
+  display: block;
+  
+  @media @min_lg {
+    font-size: 18px;
+    width: 25%;
+    flex: 0 0 25%;
+  }
+
+}
+
 .schedule_table_title {
+  
+  flex: 1 0 40%;
+}
+
+.schedule_table_price {
+  width: 10%;
+  flex: 0 0 10%;
+}
+
+.schedule_table_date {
   .avenir;
 
   color: @blue_dark;
@@ -176,13 +195,9 @@
   margin: 0;
 
   @media @min_lg {
-    width: 60%;
-
-    flex: 0 0 60%;
-
-    font-size: 22px;
     padding: 0 20px 0 0;
     margin: 0;
+    font-size: 18px;
   }
 }
 
@@ -191,7 +206,6 @@
   .block;
 
   color: @gray_70;
-  font-size: 20px;
   padding: 0 20px 0 0;
 
   .fs-swap-active & {
@@ -199,11 +213,7 @@
   }
 
   @media @min_lg {
-    width: 40%;
 
-    flex: 0 0 40%;
-
-    font-size: 22px;
     margin: 0;
   }
 }

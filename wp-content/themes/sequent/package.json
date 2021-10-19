@@ -5,6 +5,7 @@
     "dev": "gulp watch"
   },
   "devDependencies": {
+    "browser-sync": "^2.26.14",
     "formstone": "^1.4.16",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
@@ -13,18 +14,23 @@
     "gulp-include": "^2.4.1",
     "gulp-jshint": "^2.1.0",
     "gulp-less": "^4.0.1",
-    "gulp-modernizr": "^4.0.1",
+    "gulp-modernizr": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-real-favicon": "^0.3.2",
-    "gulp-requirejs": "^1.4.0",
+    "gulp-requirejs": "^1.3.0",
     "gulp-sequence": "^1.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-svg-sprites": "^4.1.2",
     "gulp-svg2png": "^2.0.2",
     "gulp-uglify": "^3.0.2",
-    "jshint": "^2.12.0",
+    "jquery-scrollify": "^1.0.19",
+    "jshint": "^2.11.1",
     "less-plugin-npm-import": "^2.1.0",
     "normalize-css": "^2.3.1",
-    "picturefill": "^3.0.3"
+    "picturefill": "^3.0.3",
+    "velocity-animate": "^1.5.2"
+  },
+  "dependencies": {
+    "gulp-livereload": "^4.0.2"
   }
 }

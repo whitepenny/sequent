@@ -38,7 +38,23 @@ $workshops = get_posts( array(
       <h2 class="public_schedule_title">Public Workshops</h2>
       <?php endif; ?>
       <div class="schedule_table">
-        
+        <div class="schedule_table_header">
+          <div class="schedule_table_handle"></div>
+          <?php
+            foreach ( $workshops as $workshop ) :
+              $w_title = get_the_title( $workshop->ID );
+              $w_label = get_field( 'label', $workshop->ID );
+              $w_price = get_field( 'price', $workshop->ID );
+          ?>
+          <div class="schedule_table_workshop">
+            <span class="label"><?php echo $w_label; ?></span>
+            <span class="title"><?php echo $w_title; ?></span>
+            <span class="price"><?php echo $w_price; ?></span>
+          </div>
+          <?php
+            endforeach;
+          ?>
+        </div>
         <div class="schedule_table_rows">
           <?php
             $swap_options = array(
@@ -55,34 +71,8 @@ $workshops = get_posts( array(
           ?>
           <div class="schedule_table_row schedule_swap_<?php echo $i; ?>">
             <div class="schedule_table_handle js-swap" data-swap-target=".schedule_swap_<?php echo $i; ?>" data-swap-options="<?php echo sl_json_options( $swap_options ); ?>">
-              <h3 class="schedule_table_date schedule_table_cell"><?php echo $title; ?></h3>
-              <span class="schedule_table_location schedule_table_cell"><?php echo $location; ?></span>
-              <?php
-              foreach ( $workshops as $workshop ) :
-                $active_instance = false;
-
-                foreach ( $instances as $instance ) {
-                  if ( $instance['session_workshop'] == $workshop->ID ) {
-                    $active_instance = $instance;
-                    break;
-                  }
-                }
-
-                if ( ! empty( $active_instance ) ) :
-                  $w_title = get_the_title( $workshop->ID );
-                  $w_label = get_field( 'label', $workshop->ID );
-                  $w_price = get_field( 'price', $workshop->ID );
-                  $w_name = $active_instance['workshop'];
-                  $link = $active_instance['link'];
-            ?>
-                <span class="schedule_table_cell schedule_table_title"><?php echo $w_title; ?></span>
-                <span class="schedule_table_cell schedule_table_price"><?php echo $w_price; ?></span>
-            
-            <?php
-                endif;
-              endforeach;
-            ?>
-            
+              <h3 class="schedule_table_title"><?php echo $title; ?></h3>
+              <span class="schedule_table_location"><?php echo $location; ?></span>
             </div>
             <?php
               foreach ( $workshops as $workshop ) :
@@ -99,12 +89,12 @@ $workshops = get_posts( array(
                   $w_title = get_the_title( $workshop->ID );
                   $w_label = get_field( 'label', $workshop->ID );
                   $w_price = get_field( 'price', $workshop->ID );
-                  $w_name = $active_instance['workshop'];
+
                   $link = $active_instance['link'];
             ?>
-
             <div class="schedule_table_instance">
               <div class="schedule_table_workshop">
+                <span class="label"><?php echo $w_label; ?></span>
                 <span class="title"><?php echo $w_title; ?></span>
                 <span class="price"><?php echo $w_price; ?></span>
               </div>

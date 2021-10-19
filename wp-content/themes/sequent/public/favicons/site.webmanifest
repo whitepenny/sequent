@@ -1,6 +1,6 @@
 {
-    "name": "Sequent Learning",
-    "short_name": "Sequent Learning",
+    "name": "OCA",
+    "short_name": "OCA",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#005db8",
-    "background_color": "#005db8",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
     "display": "standalone"
 }
