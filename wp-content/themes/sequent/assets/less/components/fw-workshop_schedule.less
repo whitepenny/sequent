@@ -180,11 +180,22 @@
 .schedule_table_title {
   
   flex: 1 0 40%;
+  display: none;
+
+  @media @min_lg {
+    display: block;
+  }
 }
 
 .schedule_table_price {
   width: 10%;
   flex: 0 0 10%;
+  display: none;
+
+  @media @min_lg {
+    display: block;
+  }
+
 }
 
 .schedule_table_date {
